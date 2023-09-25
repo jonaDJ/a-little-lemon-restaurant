@@ -1,0 +1,76 @@
+@import "../../../assets/styles/fonts";
+@import "../../../assets/styles/colors";
+@import "../../../assets/styles/mixins";
+
+.hero-container {
+  font-family: $font-family-heading;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: flex-stretch;
+  gap: 106px;
+  justify-content: center;
+  --btn-mr: auto;
+  --btn-mt: 10px;
+
+  .hero-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .title {
+    color: $primary-light-color;
+    font-family: $display-title-font-family;
+    font-size: 64px;
+  }
+
+  .subtitle {
+    font-family: $display-title-font-family;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: $text-light-color;
+    margin-bottom: -18px;
+  }
+
+  .description {
+    color: $text-light-color;
+    font-family: Karla;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .heroImage {
+    height: 385px;
+    flex-shrink: 0;
+    border-radius: 8px;
+  }
+
+  .hero-matter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+  }
+
+  .hero-info {
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 22px;
+  }
+
+  @include breakpoint-mobile {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  @include breakpoint-tablet {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}

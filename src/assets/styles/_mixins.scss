@@ -1,0 +1,28 @@
+// breakpoint-mobile: For screens with a maximum width of 576 pixels.
+// breakpoint-tablet: For screens with a width between 577 and 768 pixels.
+// breakpoint-laptop: For screens with a width between 769 and 992 pixels.
+// breakpoint-desktop: For screens with a minimum width of 993 pixels.
+
+@mixin breakpoint-mobile {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-tablet {
+  @media (min-width: 577px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-laptop {
+  @media (min-width: 769px) and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-desktop {
+  @media (min-width: 993px) {
+    @content;
+  }
+}

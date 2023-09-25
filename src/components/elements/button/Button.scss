@@ -1,0 +1,27 @@
+@import "../../../assets/styles/fonts";
+@import "../../../assets/styles/colors";
+
+// const customButtonStyle = { marginRight: "auto", marginTop: "10px" };
+:root {
+  --btn-mr: none;
+  --btn-mt: auto;
+}
+
+.button-class {
+  padding: 10px 20px;
+  background-color: $primary-light-color;
+  color: $text-dark-color;
+  border: none;
+  font-family: $font-family-heading;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-right: var(--btn-mr);
+  margin-top: var(--btn-mt);
+}
+
+.button-class:hover {
+  background-color: $selected-dark-color;
+  color: $text-light-color;
+}

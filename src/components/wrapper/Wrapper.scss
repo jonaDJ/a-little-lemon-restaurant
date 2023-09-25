@@ -1,0 +1,44 @@
+@import "../../assets/styles/mixins";
+
+.container {
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: inherit;
+  max-width: 1200px;
+  padding-left: calc((100% - 1100px) / 2);
+  padding-right: calc((100% - 1100px) / 2);
+}
+
+@include breakpoint-mobile {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@include breakpoint-laptop {
+  .container {
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@include breakpoint-tablet {
+  .container {
+    // max-width: 100%;
+    width: 90%;
+    padding-left: 10;
+    padding-right: 10px;
+  }
+}
+
+@include breakpoint-desktop {
+  .container {
+    max-width: 1200px;
+    padding-left: calc((100% - 1100px) / 2);
+    padding-right: calc((100% - 1100px) / 2);
+  }
+}

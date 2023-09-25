@@ -1,0 +1,94 @@
+@import "../../assets/styles/mixins";
+.footer-content {
+  padding: 1rem 0;
+  margin-top: 0.2rem;
+  color: black;
+
+  .footer-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 52px;
+  }
+
+  .footer-logo {
+    width: 175.361px;
+    height: 230px;
+    border-radius: 8px;
+  }
+
+  .footer-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  @include breakpoint-mobile {
+    .footer-inline {
+      gap: 0px;
+      flex-direction: column-reverse;
+    }
+    .footer-grid {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+
+  @include breakpoint-tablet {
+    .footer-inline {
+      gap: 0px;
+      flex-direction: column-reverse;
+    }
+
+    .footer-grid {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+
+  .footer-section {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .footer-nav,
+  .footer-contact,
+  .footer-social-media {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+
+  .footer-section h3 {
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: Karla;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section li {
+    margin-bottom: 5px;
+  }
+
+  .footer-section a,
+  li {
+    font-family: Karla;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #495e57;
+  }
+
+  .footer-section a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+}

@@ -1,0 +1,25 @@
+.testimonials-title {
+  display: grid;
+  place-items: center;
+  color: white;
+  font-family: Markazi Text;
+  font-size: 44px;
+  font-weight: 600;
+}
+
+.cards-rating {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  row-gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.testimonials-block {
+  // display: inline-flex;
+  // flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  gap: 35px;
+}

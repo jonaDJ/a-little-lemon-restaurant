@@ -1,0 +1,108 @@
+@import "../../../assets/styles/colors";
+
+.rating-card {
+  display: flex;
+  flex-direction: column;
+  width: 415px;
+  border-radius: 2px;
+  background: $primary-dark-color;
+  box-shadow: 0px 4px 4px 0px rgba(196, 191, 191, 0.25) inset;
+  padding: 1rem;
+  margin-bottom: -1rem;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.rating-card:last-child {
+  margin-bottom: 0;
+}
+
+.rating-main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar img {
+  width: 85px;
+  height: 85px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  margin-right: 16px;
+  object-fit: cover;
+}
+
+.rating-title {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
+.rating-title h2 {
+  color: $text-light-color;
+  font-family: Inika;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: normal;
+  max-width: 100%;
+}
+
+.rating-stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.stars {
+  display: flex;
+  padding: 0px 4.5px;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 24px;
+}
+
+.rating {
+  flex-shrink: 0;
+  color: $text-light-color;
+  font-family: Inder;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.rating-comment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.review-heading {
+  color: $text-light-color;
+  font-family: Itim;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.comment-container {
+  width: 100%;
+  max-height: 85px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.comment.expanded {
+  max-height: none;
+}
+
+.comment {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.rating-card:hover {
+  transform: scale(1.03);
+}

@@ -1,0 +1,86 @@
+@import "../../../assets/styles/colors";
+.card {
+  border: none;
+  background-color: $subtext-light-color;
+  display: flex;
+  flex-direction: column;
+  width: 256px;
+  border-radius: 3%;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card-img {
+  border-radius: inherit;
+  width: 100%;
+  max-height: 170px;
+}
+
+.card-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.card-info h4 {
+  color: $text-dark-color;
+  font-family: Inika;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 8px;
+}
+
+.card-info p {
+  color: #ee473c;
+  font-family: Inika;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.card-description {
+  margin-top: 10px;
+  color: #727171;
+  font-family: Inder;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.delivery-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.delivery-info p {
+  color: #000;
+  font-family: Inika;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 4px;
+}
+
+.delivery-info img {
+  width: 24px;
+  height: 22px;
+  margin-left: 4px;
+}

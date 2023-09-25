@@ -1,0 +1,28 @@
+@import "../../assets/styles/colors";
+
+main {
+  margin-top: 0;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: inherit;
+}
+.hero-section {
+  background-color: $primary-dark-color;
+  padding: 3.5rem 0;
+}
+
+.highlight-section {
+  /* background-color: rgb(146, 24, 24); */
+  padding: 3.5rem 0;
+}
+
+.testimonals-section {
+  background-color: black;
+  padding: 3.5rem 0;
+}
+
+.about-section {
+  background-color: $primary-light-color;
+  padding: 4rem 0;
+}

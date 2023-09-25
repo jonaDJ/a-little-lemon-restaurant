@@ -1,0 +1,33 @@
+@import "../../assets/styles/colors";
+:root {
+  --var-nav-flex-direction: row;
+}
+
+.header-content nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 16px;
+  flex-direction: var(--var-nav-flex-direction);
+}
+
+.header-content nav li {
+  margin-right: 20px;
+}
+
+.header-content nav a {
+  font-family: Karla;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $primary-dark-color;
+}
+
+.header-content nav a:hover {
+  color: $text-dark-color;
+}
