@@ -6,7 +6,7 @@
 
   .footer-inline {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
     gap: 52px;
   }
@@ -26,6 +26,7 @@
     .footer-inline {
       gap: 0px;
       flex-direction: column-reverse;
+      align-items: center;
     }
     .footer-grid {
       flex-direction: column;
@@ -35,6 +36,7 @@
 
   @include breakpoint-tablet {
     .footer-inline {
+      align-items: center;
       gap: 0px;
       flex-direction: column-reverse;
     }

@@ -1,0 +1,48 @@
+@import "../../../../assets/styles/mixins";
+
+.testimonals-section {
+  background-color: black;
+  padding: 3.5rem 0;
+
+  .testimonials-title {
+    display: grid;
+    place-items: center;
+    color: white;
+    font-family: Markazi Text;
+    font-size: 44px;
+    font-weight: 600;
+  }
+
+  .cards-rating {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    row-gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .testimonials-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+  }
+}
+@include breakpoint-laptop {
+  .cards-rating {
+    display: grid;
+    grid-template-columns: auto auto;
+
+    column-gap: 10px;
+  }
+}
+
+@include breakpoint-desktop {
+  .cards-rating {
+    display: grid;
+    grid-template-columns: auto auto;
+
+    column-gap: 10px;
+  }
+}

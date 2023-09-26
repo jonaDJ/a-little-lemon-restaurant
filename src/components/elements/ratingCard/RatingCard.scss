@@ -1,9 +1,11 @@
 @import "../../../assets/styles/colors";
+@import "../../../assets/styles/mixins";
 
 .rating-card {
   display: flex;
   flex-direction: column;
-  width: 415px;
+  width: auto;
+  margin: 0 10px;
   border-radius: 2px;
   background: $primary-dark-color;
   box-shadow: 0px 4px 4px 0px rgba(196, 191, 191, 0.25) inset;

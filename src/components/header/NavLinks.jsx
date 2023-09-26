@@ -1,10 +1,9 @@
 const navLinks = [
   { text: "Home", url: "/home" },
-  { text: "About", url: "/about" },
-  { text: "Menu", url: "/menu" },
+  { text: "highlights", url: "highlights" },
+  { text: "testimonials", url: "testimonials" },
+  { text: "About", url: "about" },
   { text: "Reservation", url: "/reservation" },
-  { text: "Order Online", url: "/order" },
-  { text: "Login", url: "/login" },
 ];
 
 export default navLinks;

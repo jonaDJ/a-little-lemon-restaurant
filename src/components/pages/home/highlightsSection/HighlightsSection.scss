@@ -1,0 +1,55 @@
+@import "../../../../assets/styles/colors";
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/mixins";
+
+.highlight-section {
+  padding: 3.5rem 0;
+
+  .highlights-section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 50px;
+  }
+
+  .section-header {
+    display: flex;
+    height: 47px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .section-header h2 {
+    color: $text-dark-color;
+    font-family: $display-title-font-family;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+}
+
+@include breakpoint-laptop {
+  .highlight-section .card-container {
+    grid-template-columns: auto auto;
+  }
+}
+
+@include breakpoint-tablet {
+  .highlight-section .card-container {
+    grid-template-columns: auto;
+  }
+}
+
+@include breakpoint-mobile {
+  .highlight-section .card-container {
+    grid-template-columns: auto;
+  }
+}

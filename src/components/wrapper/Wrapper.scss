@@ -6,9 +6,7 @@
   margin: 0 auto;
   box-sizing: border-box;
   background-color: inherit;
-  max-width: 1200px;
-  padding-left: calc((100% - 1100px) / 2);
-  padding-right: calc((100% - 1100px) / 2);
+  max-width: 768px;
 }
 
 @include breakpoint-mobile {
@@ -20,7 +18,7 @@
 
 @include breakpoint-laptop {
   .container {
-    max-width: 100%;
+    max-width: 768px;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -28,17 +26,8 @@
 
 @include breakpoint-tablet {
   .container {
-    // max-width: 100%;
-    width: 90%;
+    max-width: 608px;
     padding-left: 10;
     padding-right: 10px;
-  }
-}
-
-@include breakpoint-desktop {
-  .container {
-    max-width: 1200px;
-    padding-left: calc((100% - 1100px) / 2);
-    padding-right: calc((100% - 1100px) / 2);
   }
 }

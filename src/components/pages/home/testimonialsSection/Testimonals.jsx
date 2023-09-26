@@ -1,10 +1,10 @@
 import React from "react";
-import Wrapper from "../../wrapper/Wrapper";
-import RatingCard from "../../elements/ratingCard/RatingCard";
+import Wrapper from "../../../wrapper/Wrapper";
+import RatingCard from "../../../elements/ratingCard/RatingCard";
 import "./Testimonals.scss";
-import avatar1 from "../../../assets/images/avatar1.jpg";
-import avatar2 from "../../../assets/images/avatar2.jpg";
-import avatar3 from "../../../assets/images/avatar3.jpg";
+import avatar1 from "../../../../assets/images/avatar1.jpg";
+import avatar2 from "../../../../assets/images/avatar2.jpg";
+import avatar3 from "../../../../assets/images/avatar3.jpg";
 
 const testimonialData = [
   {
@@ -43,23 +43,25 @@ const testimonialData = [
 
 const Testimonals = () => {
   return (
-    <Wrapper>
-      <div className="testimonials-block">
-        <h2 className="testimonials-title">Testimonials</h2>
-        <div className="cards-rating">
-          {testimonialData.map((testimonial, index) => (
-            <RatingCard
-              key={index}
-              avatar={testimonial.avatar}
-              name={testimonial.name}
-              stars={testimonial.stars}
-              reviewHeading={testimonial.reviewHeading}
-              comment={testimonial.comment}
-            />
-          ))}
+    <section className="testimonals-section">
+      <Wrapper>
+        <div className="testimonials-block">
+          <h2 className="testimonials-title">Customers Say</h2>
+          <div className="cards-rating">
+            {testimonialData.map((testimonial, index) => (
+              <RatingCard
+                key={index}
+                avatar={testimonial.avatar}
+                name={testimonial.name}
+                stars={testimonial.stars}
+                reviewHeading={testimonial.reviewHeading}
+                comment={testimonial.comment}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-    </Wrapper>
+      </Wrapper>
+    </section>
   );
 };
 

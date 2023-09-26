@@ -3,6 +3,8 @@ import Wrapper from "../wrapper/Wrapper";
 import "./Footer.scss";
 import img from "../../assets/images/restaurant.jpg";
 import navLinks from "../header/NavLinks";
+import { NavLink } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 const Footer = () => {
   const navSection = (
@@ -12,7 +14,20 @@ const Footer = () => {
         <ul>
           {navLinks.map((link, index) => (
             <li key={index}>
-              <a href={link.url}>{link.text}</a>
+              {link.url.startsWith("/") ? (
+                <NavLink to={link.url} activeClassName="active">
+                  {link.text}
+                </NavLink>
+              ) : (
+                <ScrollLink
+                  to={link.url}
+                  smooth={true}
+                  duration={500}
+                  activeClassName="active"
+                >
+                  {link.text}
+                </ScrollLink>
+              )}
             </li>
           ))}
         </ul>
