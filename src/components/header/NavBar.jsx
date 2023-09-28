@@ -1,23 +1,20 @@
+// NavBar.js
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll"; // Import ScrollLink from react-scroll
 import "./NavBar.scss";
-import navLinks from "./NavLinks";
 
-const NavBar = () => {
+const NavBar = ({ filteredLinks }) => {
   return (
     <nav>
       <ul>
-        {navLinks.map((link, index) => (
+        {filteredLinks.map((link, index) => (
           <li key={index}>
             {link.url.startsWith("/") ? (
               <NavLink to={link.url} activeClassName="active">
                 {link.text}
               </NavLink>
             ) : (
-              <ScrollLink to={link.url} smooth={true} activeClassName="active">
-                {link.text}
-              </ScrollLink>
+              <a href={link.url}>{link.text}</a>
             )}
           </li>
         ))}

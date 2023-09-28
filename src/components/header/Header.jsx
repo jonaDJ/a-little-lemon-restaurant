@@ -1,13 +1,18 @@
+// Header.js
 import React, { useState, useEffect } from "react";
 import Logo from "../../assets/svg/Logo.svg";
 import NavBar from "./NavBar";
 import Wrapper from "../wrapper/Wrapper";
 import SideNav from "./SideNav";
 import "./Header.scss";
+import { useLocation } from "react-router-dom";
+import navLinks from "./NavLinks";
 
 const Header = () => {
   const [showMenuButton, setShowMenuButton] = useState(false);
   const [isSideNavOpen, setIsSideNavOpen] = useState(false);
+
+  const location = useLocation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -36,6 +41,13 @@ const Header = () => {
     setIsSideNavOpen(false);
   };
 
+  const filteredLinks = navLinks.filter((link) => {
+    if (location.pathname === "/reservation") {
+      return link.url === "/home";
+    }
+    return true;
+  });
+
   return (
     <header className="header-content">
       <Wrapper>
@@ -46,11 +58,15 @@ const Header = () => {
               &#9776;
             </button>
           ) : (
-            <NavBar className="NavBar" />
+            <NavBar className="NavBar" filteredLinks={filteredLinks} />
           )}
         </div>
       </Wrapper>
-      <SideNav isOpen={isSideNavOpen} closeNav={closeSideNav} />
+      <SideNav
+        isOpen={isSideNavOpen}
+        closeNav={closeSideNav}
+        filteredLinks={filteredLinks}
+      />
     </header>
   );
 };

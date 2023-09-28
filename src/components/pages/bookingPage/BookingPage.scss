@@ -1,0 +1,121 @@
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/colors";
+
+.res-table-section {
+  background-color: $primary-dark-color;
+  padding: 3.5rem 0;
+
+  .reservation-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 1000px;
+
+    .reservation-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      align-self: stretch;
+
+      h2 {
+        color: $text-light-color;
+        font-family: Inika;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: normal;
+      }
+
+      h4 {
+        margin: 0;
+        color: $primary-light-color;
+        font-family: Inika;
+        font-size: 27px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+}
+
+.reservation-confirmation {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+  .confirmation-header {
+    background-color: black;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    h3 {
+      color: #ffcc00;
+      font-size: 24px;
+      margin: 0;
+    }
+
+    p {
+      color: #666;
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+
+  .confirmation-details {
+    padding: 20px;
+
+    .reservation-info {
+      h4 {
+        color: #333;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          color: #666;
+          font-size: 16px;
+          margin-bottom: 5px;
+
+          strong {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .contact-info {
+      h4 {
+        color: #333;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: #666;
+        font-size: 16px;
+        margin: 0;
+
+        strong {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .closing-message {
+    color: #333;
+    font-size: 18px;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}

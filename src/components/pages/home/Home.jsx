@@ -1,5 +1,5 @@
 import React from "react";
-import { Element } from "react-scroll"; // Import Element from react-scroll
+import { Element } from "react-scroll";
 import "./Home.scss";
 import AboutSection from "./aboutSection/AboutSection";
 import CallToAction from "./callToAction/CallToAction";
@@ -10,13 +10,13 @@ const Home = () => {
   return (
     <>
       <CallToAction />
-      <Element name="highlights">
+      <Element name="highlights" id="highlights">
         <HighlightsSection />
       </Element>
-      <Element name="testimonials">
+      <Element name="testimonials" id="testimonials">
         <Testimonals />
       </Element>
-      <Element name="about">
+      <Element name="about" id="about">
         <AboutSection />
       </Element>
     </>

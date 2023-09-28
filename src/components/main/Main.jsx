@@ -1,14 +1,14 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "../pages/home/Home"; // Import your page components here
-import ResTableSection from "../pages/resTableSection/ResTableSection"; // Import other page components as needed
+import Home from "../pages/home/Home";
+import BookingPage from "../pages/bookingPage/BookingPage";
 
 const Main = () => {
   return (
     <main>
       <Routes>
         <Route path="/home" element={<Home />} />
-        <Route path="/reservation" element={<ResTableSection />} />
+        <Route path="/reservation" element={<BookingPage />} />
       </Routes>
     </main>
   );
