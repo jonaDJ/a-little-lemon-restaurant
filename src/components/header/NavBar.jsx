@@ -2,12 +2,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.scss";
+import navLinks from "./NavLinks";
 
-const NavBar = ({ filteredLinks }) => {
+const NavBar = () => {
   return (
     <nav>
       <ul>
-        {filteredLinks.map((link, index) => (
+        {navLinks.map((link, index) => (
           <li key={index}>
             {link.url.startsWith("/") ? (
               <NavLink to={link.url} activeClassName="active">

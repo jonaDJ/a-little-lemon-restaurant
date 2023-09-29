@@ -6,13 +6,22 @@ import Wrapper from "../wrapper/Wrapper";
 import SideNav from "./SideNav";
 import "./Header.scss";
 import { useLocation } from "react-router-dom";
-import navLinks from "./NavLinks";
-
 const Header = () => {
   const [showMenuButton, setShowMenuButton] = useState(false);
   const [isSideNavOpen, setIsSideNavOpen] = useState(false);
 
   const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const targetId = location.hash.substring(1);
+
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -41,13 +50,6 @@ const Header = () => {
     setIsSideNavOpen(false);
   };
 
-  const filteredLinks = navLinks.filter((link) => {
-    if (location.pathname === "/reservation") {
-      return link.url === "/home";
-    }
-    return true;
-  });
-
   return (
     <header className="header-content">
       <Wrapper>
@@ -58,15 +60,11 @@ const Header = () => {
               &#9776;
             </button>
           ) : (
-            <NavBar className="NavBar" filteredLinks={filteredLinks} />
+            <NavBar className="NavBar" />
           )}
         </div>
       </Wrapper>
-      <SideNav
-        isOpen={isSideNavOpen}
-        closeNav={closeSideNav}
-        filteredLinks={filteredLinks}
-      />
+      <SideNav isOpen={isSideNavOpen} closeNav={closeSideNav} />
     </header>
   );
 };
