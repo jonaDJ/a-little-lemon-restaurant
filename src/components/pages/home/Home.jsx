@@ -9,9 +9,7 @@ import Testimonals from "./testimonialsSection/Testimonals";
 const Home = () => {
   return (
     <>
-      <Element name="callToAction" id="callToAction">
-        <CallToAction />
-      </Element>
+      <CallToAction />
       <Element name="highlights" id="highlights">
         <HighlightsSection />
       </Element>

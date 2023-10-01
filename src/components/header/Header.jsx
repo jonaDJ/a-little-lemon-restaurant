@@ -5,7 +5,7 @@ import NavBar from "./NavBar";
 import Wrapper from "../wrapper/Wrapper";
 import SideNav from "./SideNav";
 import "./Header.scss";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 const Header = () => {
   const [showMenuButton, setShowMenuButton] = useState(false);
   const [isSideNavOpen, setIsSideNavOpen] = useState(false);
@@ -20,6 +20,8 @@ const Header = () => {
       if (targetElement) {
         targetElement.scrollIntoView({ behavior: "smooth" });
       }
+    } else if (location.pathname[0] === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [location]);
 
@@ -54,7 +56,9 @@ const Header = () => {
     <header className="header-content">
       <Wrapper>
         <div className="header-inline">
-          <img src={Logo} alt="Logo" className="header-logo" />
+          <Link to="/">
+            <img src={Logo} alt="Logo" className="header-logo" />
+          </Link>
           {showMenuButton ? (
             <button className="menu-button" onClick={toggleSideNav}>
               &#9776;
