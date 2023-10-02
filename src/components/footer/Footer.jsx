@@ -16,8 +16,9 @@ const Footer = () => {
               {link.url.startsWith("/") ? (
                 <NavLink
                   to={link.url}
-                  className="footer-link"
-                  activeClassName="active"
+                  className={({ isActive }) =>
+                    isActive ? "active" : "inactive"
+                  }
                 >
                   {link.text}
                 </NavLink>

@@ -1,4 +1,3 @@
-// NavBar.js
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.scss";
@@ -11,7 +10,10 @@ const NavBar = () => {
         {navLinks.map((link, index) => (
           <li key={index}>
             {link.url.startsWith("/") ? (
-              <NavLink to={link.url} activeClassName="active">
+              <NavLink
+                to={link.url}
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+              >
                 {link.text}
               </NavLink>
             ) : (
