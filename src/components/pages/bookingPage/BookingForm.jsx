@@ -80,7 +80,7 @@ const BookingForm = ({
                 required
                 aria-required="true"
                 aria-labelledby="guests-label"
-                min={0}
+                min={1}
               />
             </div>
             <div className="form-field">

@@ -7,7 +7,7 @@ const BookingPage = ({ availableTimes, dispatch }) => {
   const initialData = {
     date: "",
     time: "",
-    guests: "0",
+    guests: "1",
     name: "",
     occasion: "None",
     email: "",
