@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../../elements/button/Button";
 import "./BookingForm.scss";
-
+import { fetchAPI } from "../../../api/api";
 const BookingForm = ({
   reservationData,
   setReservationData,
@@ -9,10 +9,14 @@ const BookingForm = ({
   handleReservationSubmit,
   dispatch,
 }) => {
-  const handleOnChange = (e, fieldName) => {
+  const handleOnChange = async (e, fieldName) => {
     const { value } = e.target;
 
-    if (fieldName === "date") dispatch({ type: "updateTimes", date: value });
+    if (fieldName === "date") {
+      const selectedDate = new Date(value);
+      const times = await fetchAPI(selectedDate);
+      dispatch({ type: "updateTimes", date: selectedDate, times });
+    }
 
     setReservationData({
       ...reservationData,

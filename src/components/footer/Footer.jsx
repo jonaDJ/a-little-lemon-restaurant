@@ -1,7 +1,7 @@
 import React from "react";
 import Wrapper from "../wrapper/Wrapper";
 import "./Footer.scss";
-import img from "../../assets/images/restaurant.jpg";
+import img from "../../assets/images/little-lemon-footer.png";
 import navLinks from "../header/NavLinks";
 import { NavLink } from "react-router-dom";
 

@@ -1,12 +1,19 @@
-import React, { useEffect, useReducer } from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { useReducer, useState } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import Home from "../pages/home/Home";
 import BookingPage from "../pages/bookingPage/BookingPage";
-import { fetchAPI } from "../../api/api";
+import { submitAPI } from "../../api/api";
+import ConfirmedBooking from "../pages/confirmationBooking/ConfirmedBooking";
 
-const initializeTimes = ["5:00 PM", "6:00 PM", "7:00 PM", "8:00 PM", "9:00 PM"];
+export const initializeTimes = [
+  "5:00 PM",
+  "6:00 PM",
+  "7:00 PM",
+  "8:00 PM",
+  "9:00 PM",
+];
 
-const updateTimes = (state, action) => {
+export const updateTimes = (state, action) => {
   if (action.type === "updateTimes") {
     const selectedDate = new Date(action.date);
     const dayOfWeek = selectedDate.getDay();
@@ -21,17 +28,18 @@ const updateTimes = (state, action) => {
 };
 
 const Main = () => {
+  const navigate = useNavigate();
+
+  const [confirmationData, setConfirmationData] = useState(null);
+
   const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes);
 
-  useEffect(() => {
-    async function fetchData() {
-      const selectedDate = new Date();
-      const times = await fetchAPI(selectedDate);
-      dispatch({ type: "updateTimes", date: selectedDate, times });
+  const submitForm = async (formData) => {
+    const isSubmitted = await submitAPI(formData);
+    if (isSubmitted) {
+      navigate("/confirmed");
     }
-
-    fetchData();
-  }, []);
+  };
 
   return (
     <main>
@@ -40,8 +48,17 @@ const Main = () => {
         <Route
           path="/reservation"
           element={
-            <BookingPage availableTimes={availableTimes} dispatch={dispatch} />
+            <BookingPage
+              availableTimes={availableTimes}
+              dispatch={dispatch}
+              submitForm={submitForm}
+              setConfirmationData={setConfirmationData}
+            />
           }
+        />
+        <Route
+          path="/confirmed"
+          element={<ConfirmedBooking confirmationData={confirmationData} />}
         />
       </Routes>
     </main>
