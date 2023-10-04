@@ -1,6 +1,5 @@
 @import "../../../assets/styles/mixins";
 @import "../../../assets/styles/colors";
-
 .booking-form-container {
   display: flex;
   width: 90%;
@@ -45,9 +44,22 @@
           flex-direction: column;
           justify-content: flex-start;
 
-          input {
+          input,
+          select,
+          textarea {
             display: flex;
             flex-direction: row;
+            border: 1px solid #ccc;
+            padding: 8px;
+            border-radius: 4px;
+
+            &.valid {
+              border-color: green; // Change to your valid field style
+            }
+
+            &.invalid {
+              border-color: red; // Change to your invalid field style
+            }
           }
 
           &.form-textarea {
@@ -125,6 +137,12 @@
     color: rgb(87, 23, 23);
     font-size: 18px;
     margin-left: 4px;
+  }
+
+  .error-message {
+    color: red; // Change to your error message color
+    font-size: 16px;
+    margin-top: 4px;
   }
 }
 

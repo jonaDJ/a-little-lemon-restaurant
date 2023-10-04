@@ -22,7 +22,6 @@ const BookingPage = ({
   const [reservationData, setReservationData] = useState(initialData);
 
   const handleReservationSubmit = async (e) => {
-    e.preventDefault();
     await submitForm(reservationData);
     setConfirmationData(reservationData);
   };
