@@ -18,9 +18,13 @@
   border-radius: 6px;
   margin-right: var(--btn-mr);
   margin-top: var(--btn-mt);
-}
 
-.button-class:hover {
-  background-color: $selected-dark-color;
-  color: $text-light-color;
+  .button-class:hover {
+    background-color: $selected-dark-color;
+    color: $text-light-color;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 }

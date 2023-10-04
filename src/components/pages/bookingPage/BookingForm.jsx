@@ -48,7 +48,7 @@ const BookingForm = ({
         initialValues={{
           date: "",
           time: "",
-          guests: "1",
+          guests: "0",
           name: "",
           occasion: "None",
           email: "",
@@ -58,13 +58,13 @@ const BookingForm = ({
         validationSchema={validationSchema}
         onSubmit={handleReservationSubmit}
       >
-        {({ isSubmitting, handleChange, values }) => (
+        {({ isSubmitting, handleChange, values, isValid }) => (
           <Form className="reservation-form">
             <fieldset className="table-details-fieldset">
               <legend>Table Reservation Details:</legend>
               <div className="table-forms">
                 <div className="form-field">
-                  <label htmlFor="res-date" id="date-label">
+                  <label htmlFor="res-date">
                     Date<span className="required-asterisk">*</span>:
                   </label>
                   <Field
@@ -75,7 +75,8 @@ const BookingForm = ({
                     type="date"
                     id="res-date"
                     name="date"
-                    aria-labelledby="date-label"
+                    aria-required="true"
+                    aria-label="Date"
                     min={new Date().toISOString().split("T")[0]}
                     onChange={(e) => {
                       handleChange(e);
@@ -90,7 +91,7 @@ const BookingForm = ({
                 </div>
 
                 <div className="form-field">
-                  <label htmlFor="res-time" id="time-label">
+                  <label htmlFor="res-time">
                     Time<span className="required-asterisk">*</span>:
                   </label>
                   <Field
@@ -100,6 +101,8 @@ const BookingForm = ({
                     }`}
                     id="res-time"
                     name="time"
+                    aria-required="true"
+                    aria-label="Time"
                     onChange={(e) => {
                       handleChange(e);
                       handleOnChange(e, "time");
@@ -120,7 +123,7 @@ const BookingForm = ({
                 </div>
 
                 <div className="form-field">
-                  <label htmlFor="res-guests" id="guests-label">
+                  <label htmlFor="res-guests">
                     No. of Guests<span className="required-asterisk">*</span>:
                   </label>
                   <Field
@@ -131,7 +134,8 @@ const BookingForm = ({
                     type="number"
                     id="res-guests"
                     name="guests"
-                    min="1"
+                    aria-required="true"
+                    aria-label="Number of Guests"
                     onChange={(e) => {
                       handleChange(e);
                       handleOnChange(e, "guests");
@@ -144,14 +148,13 @@ const BookingForm = ({
                   />
                 </div>
                 <div className="form-field">
-                  <label htmlFor="res-occasion" id="occasion-label">
-                    Occasion:
-                  </label>
+                  <label htmlFor="res-occasion">Occasion:</label>
                   <Field
                     as="select"
                     className="form-field"
                     id="res-occasion"
                     name="occasion"
+                    aria-label="Occasion"
                     onChange={handleChange}
                   >
                     <option value="None">None</option>
@@ -163,10 +166,10 @@ const BookingForm = ({
             </fieldset>
 
             <fieldset className="user-details-fieldset">
-              <legend>Your Details:</legend>
+              <legend>Your Details:{isSubmitting}</legend>
               <div className="user-form">
                 <div className="form-field name">
-                  <label htmlFor="res-name" id="name-label">
+                  <label htmlFor="res-name">
                     Name<span className="required-asterisk">*</span>:
                   </label>
                   <Field
@@ -177,6 +180,8 @@ const BookingForm = ({
                     type="text"
                     id="res-name"
                     name="name"
+                    aria-required="true"
+                    aria-label="Name"
                     onChange={(e) => {
                       handleChange(e);
                       handleOnChange(e, "name");
@@ -190,7 +195,7 @@ const BookingForm = ({
                 </div>
 
                 <div className="form-field email">
-                  <label htmlFor="res-email" id="email-label">
+                  <label htmlFor="res-email">
                     Email<span className="required-asterisk">*</span>:
                   </label>
                   <Field
@@ -201,6 +206,8 @@ const BookingForm = ({
                     type="email"
                     id="res-email"
                     name="email"
+                    aria-required="true"
+                    aria-label="Email"
                     onChange={(e) => {
                       handleChange(e);
                       handleOnChange(e, "email");
@@ -214,9 +221,7 @@ const BookingForm = ({
                 </div>
 
                 <div className="form-field phone">
-                  <label htmlFor="res-phone" id="phone-label">
-                    Phone:
-                  </label>
+                  <label htmlFor="res-phone">Phone:</label>
                   <Field
                     as="input"
                     className={`form-field ${
@@ -225,6 +230,7 @@ const BookingForm = ({
                     type="tel"
                     id="res-phone"
                     name="phone"
+                    aria-label="Phone"
                     onChange={(e) => {
                       handleChange(e);
                       handleOnChange(e, "phone");
@@ -238,12 +244,7 @@ const BookingForm = ({
                 </div>
 
                 <div className="form-field form-textarea specialRequest">
-                  <label
-                    htmlFor="res-special-request"
-                    id="special-request-label"
-                  >
-                    Special Requests:
-                  </label>
+                  <label htmlFor="res-special-request">Special Requests:</label>
                   <Field
                     as="textarea"
                     className={`form-field ${
@@ -253,6 +254,7 @@ const BookingForm = ({
                     }`}
                     id="res-special-request"
                     name="specialRequests"
+                    aria-label="Special Requests"
                     onChange={(e) => {
                       handleChange(e);
                       handleOnChange(e, "specialRequests");
@@ -266,8 +268,11 @@ const BookingForm = ({
                 </div>
               </div>
             </fieldset>
-            <div className="form-fields">
-              <Button text="Reserve Table" disabled={isSubmitting} />
+            <div className="form-fields-button">
+              <Button
+                text="Reserve Table"
+                disabled={!isValid || isSubmitting}
+              />
             </div>
           </Form>
         )}
