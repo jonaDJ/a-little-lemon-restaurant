@@ -1,10 +1,12 @@
 @import "../../../assets/styles/colors";
+@import "../../../assets/styles/mixins";
+
 .card {
   border: none;
-  background-color: $subtext-light-color;
+  background-color: #edefee;
   display: flex;
   flex-direction: column;
-  width: 256px;
+  width: 235px;
   border-radius: 3%;
   justify-content: space-between;
   height: 100%;
@@ -12,8 +14,16 @@
 
 .card-img {
   border-radius: inherit;
-  width: 100%;
-  max-height: 170px;
+  width: auto;
+  height: 170px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.card-data {
+  display: flex;
+  flex-direction: column;
 }
 
 .card-content {
@@ -42,7 +52,7 @@
   margin-bottom: 8px;
 }
 
-.card-info p {
+.card-info h5 {
   color: #ee473c;
   font-family: Inika;
   font-size: 20px;
@@ -55,7 +65,7 @@
   margin-top: 10px;
   color: #727171;
   font-family: Inder;
-  font-size: 16px;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
