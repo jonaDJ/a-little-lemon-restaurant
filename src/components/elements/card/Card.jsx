@@ -9,7 +9,7 @@ const Card = ({ imageUrl, itemName, price, description }) => {
       <div className="card-content">
         <div className="card-info">
           <h4>{itemName}</h4>
-          <p>{price}</p>
+          <h5>{price}</h5>
         </div>
         <p className="card-description">{description}</p>
       </div>

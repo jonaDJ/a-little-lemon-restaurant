@@ -8,7 +8,7 @@
   gap: 20px;
   border-radius: 8px;
   padding: 20px 10px;
-  background: #c2ac97;
+  background: #e2dcdc;
 
   .reservation-form {
     display: flex;
@@ -28,7 +28,7 @@
 
       .table-forms {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
         justify-self: center;
 
         label {
@@ -47,6 +47,10 @@
           width: 90%;
           flex-direction: column;
           justify-content: flex-start;
+
+          select {
+            width: 95%;
+          }
 
           input,
           select,
@@ -91,6 +95,7 @@
           "name none"
           "email phone"
           "specialRequest specialRequest";
+        grid-template-columns: 1fr 1fr;
         justify-items: center;
 
         label {
@@ -186,7 +191,7 @@
       .table-details-fieldset {
         .table-forms {
           display: grid;
-          grid-template-columns: auto;
+          grid-template-columns: 1fr;
         }
       }
     }

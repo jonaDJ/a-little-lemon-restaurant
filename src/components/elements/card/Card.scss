@@ -94,3 +94,49 @@
   height: 22px;
   margin-left: 4px;
 }
+
+@include breakpoint-laptop {
+  .card {
+    width: auto;
+
+    h4,
+    h5 {
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+  .card-img {
+    max-width: 235px;
+  }
+}
+
+@include breakpoint-tablet {
+  .card {
+    width: auto;
+    flex-direction: row;
+
+    h4,
+    h5 {
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+  .card-img {
+    max-width: 235px;
+  }
+}
+
+@include breakpoint-mobile {
+  .card {
+    width: auto;
+
+    h4,
+    h5 {
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+  .card-img {
+    max-width: 235px;
+  }
+}

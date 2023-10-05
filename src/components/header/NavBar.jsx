@@ -5,7 +5,7 @@ import navLinks from "./NavLinks";
 
 const NavBar = () => {
   return (
-    <nav>
+    <nav role="navigation">
       <ul>
         {navLinks.map((link, index) => (
           <li key={index}>
@@ -13,6 +13,10 @@ const NavBar = () => {
               <NavLink
                 to={link.url}
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
+                aria-current={
+                  link.url === window.location.pathname ? "page" : undefined
+                }
+                exact
               >
                 {link.text}
               </NavLink>

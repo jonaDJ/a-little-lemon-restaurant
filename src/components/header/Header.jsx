@@ -53,14 +53,18 @@ const Header = () => {
   };
 
   return (
-    <header className="header-content">
+    <header className="header-content" role="banner">
       <Wrapper>
         <div className="header-inline">
-          <Link to="/">
-            <img src={Logo} alt="Logo" className="header-logo" />
+          <Link to="/" tabIndex={-1}>
+            <img src={Logo} alt="Little Lemon Logo" className="header-logo" />
           </Link>
           {showMenuButton ? (
-            <button className="menu-button" onClick={toggleSideNav}>
+            <button
+              className="menu-button"
+              onClick={toggleSideNav}
+              aria-label="Toggle Navigation Menu"
+            >
               &#9776;
             </button>
           ) : (

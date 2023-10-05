@@ -1,5 +1,9 @@
 @import "../../assets/styles/mixins";
 
+:root {
+  --bg-img: none;
+}
+
 .container {
   justify-content: space-between;
   align-items: center;
@@ -7,6 +11,7 @@
   box-sizing: border-box;
   background-color: inherit;
   max-width: 768px;
+  background: var(--bg-img);
 }
 
 @include breakpoint-mobile {

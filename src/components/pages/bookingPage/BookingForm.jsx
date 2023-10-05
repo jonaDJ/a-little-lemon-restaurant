@@ -108,7 +108,7 @@ const BookingForm = ({
                       handleOnChange(e, "time");
                     }}
                   >
-                    <option value="">Select a time</option>
+                    <option value="">Select time</option>
                     {availableTimes.map((time) => (
                       <option key={time} value={time}>
                         {time}

@@ -5,9 +5,9 @@
       rgba(0, 0, 0, 0.42),
       rgba(0, 0, 0, 0.73)
     ),
-    url("https://user-images.githubusercontent.com/70451928/222874465-67747b54-06d5-44c5-ac95-517f13610466.jpg");
+    url("../../../assets/images/restaurant.jpg");
   width: 100%;
-  background-size: cover;
+  background-size: fit;
   padding: 3.5rem 0;
 }
 
@@ -26,6 +26,9 @@
   h2 {
     margin-bottom: 30px;
     font-size: 2rem;
+    color: #f4ce14;
+    font-family: "Markazi Text";
+    font-size: 64px;
   }
 
   p {
