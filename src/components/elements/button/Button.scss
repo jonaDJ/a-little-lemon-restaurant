@@ -1,11 +1,7 @@
 @import "../../../assets/styles/fonts";
 @import "../../../assets/styles/colors";
 
-:root {
-  --btn-mr: none;
-  --btn-mt: auto;
-}
-
+// Button.scss
 .button-class {
   padding: 10px 20px;
   background-color: $primary-light-color;
@@ -18,13 +14,17 @@
   border-radius: 6px;
   margin-right: var(--btn-mr);
   margin-top: var(--btn-mt);
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 
-  .button-class:hover {
-    background-color: $selected-dark-color;
+  &:hover {
+    background-color: $text-dark-color;
     color: $text-light-color;
   }
 
   &:disabled {
     cursor: not-allowed;
+    border: 2px solid gray;
+    background-color: lightgray;
+    color: gray;
   }
 }

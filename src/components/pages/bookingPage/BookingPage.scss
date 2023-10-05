@@ -1,43 +1,72 @@
 @import "../../../assets/styles/mixins";
-@import "../../../assets/styles/colors";
-
-.res-table-section {
-  background-color: $primary-dark-color;
+.reservation-wrapper {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.42),
+      rgba(0, 0, 0, 0.73)
+    ),
+    url("https://user-images.githubusercontent.com/70451928/222874465-67747b54-06d5-44c5-ac95-517f13610466.jpg");
+  width: 100%;
+  background-size: cover;
   padding: 3.5rem 0;
+}
 
-  .reservation-page {
-    display: flex;
+.reservation-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.reservation-text {
+  color: #fff;
+  width: 60%;
+
+  h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+
+  p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+}
+
+@include breakpoint-tablet {
+  .reservation-container {
     flex-direction: column;
-    justify-content: center;
+    padding-left: 30px;
+    padding-right: 30px;
     align-items: center;
-    gap: 30px;
-    max-width: 1000px;
+    width: auto;
+  }
 
-    .reservation-title {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      align-self: stretch;
+  .reservation-text {
+    width: auto;
+    margin-top: 50px;
+  }
 
-      h2 {
-        color: $text-light-color;
-        font-family: Inika;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 40px;
-        line-height: normal;
-      }
+  .reservation-text p {
+    margin-bottom: 0;
+  }
+}
 
-      h4 {
-        margin: 0;
-        color: $primary-light-color;
-        font-family: Inika;
-        font-size: 27px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-      }
-    }
+@include breakpoint-mobile {
+  .reservation-container {
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
+    align-items: center;
+  }
+
+  .reservation-text {
+    width: auto;
+    margin-top: 50px;
+  }
+
+  .reservation-text p {
+    margin-bottom: 0;
   }
 }

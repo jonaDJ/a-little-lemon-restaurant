@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Wrapper from "../../wrapper/Wrapper";
 import "./BookingPage.scss";
 import BookingForm from "./BookingForm";
+import Wrapper from "../../wrapper/Wrapper";
 
 const BookingPage = ({
   availableTimes,
@@ -27,13 +27,24 @@ const BookingPage = ({
   };
 
   return (
-    <section className="res-table-section" aria-labelledby="reservation-title">
+    <div className="reservation-wrapper">
       <Wrapper>
-        <div className="reservation-page">
-          <div className="reservation-title">
-            <h2 id="reservation-title">Table Reservation</h2>
-            <h4>We are looking forward to serving you</h4>
+        <div className="reservation-container">
+          <div className="reservation-text">
+            <h2>Table Reservation</h2>
+            <p>
+              Experience the perfect blend of exquisite cuisine and exceptional
+              service at Little Lemon, where every meal is a celebration of
+              flavors.
+            </p>
+            <p>
+              Whether you're planning a romantic dinner for two, a family
+              gathering, or a special occasion, we're here to make your dining
+              experience memorable.
+            </p>
+            <p>Book your table now to savor the moments with us.</p>
           </div>
+
           <BookingForm
             reservationData={reservationData}
             setReservationData={setReservationData}
@@ -43,7 +54,7 @@ const BookingPage = ({
           />
         </div>
       </Wrapper>
-    </section>
+    </div>
   );
 };
 

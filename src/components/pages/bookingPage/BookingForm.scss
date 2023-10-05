@@ -1,197 +1,193 @@
 @import "../../../assets/styles/mixins";
 @import "../../../assets/styles/colors";
 
-.res-table-section {
-  .reservation-page {
+.booking-form-container {
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 8px;
+  padding: 20px 10px;
+  background: #c2ac97;
+
+  .reservation-form {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .reservation-title {
-    text-align: center;
-
-    h2 {
-      font-family: Itim;
-      font-size: 20px;
-      font-weight: bold;
-      line-height: normal;
-    }
-
-    h4 {
-      font-family: Itim;
-      font-size: 16px;
-      font-weight: normal;
-      line-height: normal;
-    }
-  }
-
-  .booking-form-container {
-    display: flex;
-    width: 90%;
     flex-direction: column;
     gap: 20px;
-    border-radius: 8px;
-    padding: 20px;
-    background: #c2ac97;
+    width: 100%;
 
-    .reservation-form {
+    .table-details-fieldset {
+      border: 0;
+
+      legend {
+        font-family: Itim;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: normal;
+      }
+
+      .table-forms {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-self: center;
+
+        label {
+          font-family: Itim;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        .form-field {
+          display: flex;
+          align-items: flex-start;
+          border-radius: 8px;
+          border: 0px;
+          padding: 8px;
+          width: 90%;
+          flex-direction: column;
+          justify-content: flex-start;
+
+          input,
+          select,
+          textarea {
+            display: flex;
+            flex-direction: row;
+            border: 1px solid #ccc;
+            padding: 8px;
+            border-radius: 4px;
+
+            &.valid {
+              border-color: green;
+            }
+
+            &.invalid {
+              border-color: red;
+            }
+          }
+
+          &.form-textarea {
+            height: 100px;
+            resize: vertical;
+            grid-column: span 2;
+          }
+        }
+      }
+    }
+
+    .user-details-fieldset {
+      border: 0;
+
+      legend {
+        font-family: Itim;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: normal;
+      }
+
+      .user-form {
+        display: grid;
+        grid-template-areas:
+          "name none"
+          "email phone"
+          "specialRequest specialRequest";
+        justify-items: center;
+
+        label {
+          font-family: Itim;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        .form-field {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          border-radius: 8px;
+          border: 0px;
+          padding: 8px;
+          width: 90%;
+          display: flex;
+          justify-content: flex-start;
+
+          &.form-textarea {
+            height: auto;
+            resize: vertical;
+            grid-column: span 2;
+          }
+
+          &.name {
+            grid-area: name;
+          }
+
+          &.phone {
+            grid-area: phone;
+          }
+
+          &.email {
+            grid-area: email;
+          }
+
+          &.specialRequest {
+            grid-area: specialRequest;
+          }
+        }
+      }
+    }
+
+    .form-fields-button {
       display: flex;
-      flex-direction: column;
-      gap: 20px;
-      width: 100%;
-
-      .table-details-fieldset {
-        border: 0;
-
-        legend {
-          font-family: Itim;
-          font-size: 20px;
-          font-weight: bold;
-          line-height: normal;
-        }
-
-        .table-forms {
-          display: grid;
-          grid-template-columns: auto auto;
-          justify-self: center;
-
-          label {
-            font-family: Itim;
-            font-size: 20px;
-            font-weight: 400;
-            line-height: normal;
-          }
-
-          .form-field {
-            display: flex;
-            align-items: flex-start;
-            border-radius: 8px;
-            border: 0px;
-            padding: 8px;
-            width: 90%;
-            flex-direction: column;
-            justify-content: flex-start;
-
-            input,
-            select,
-            textarea {
-              display: flex;
-              flex-direction: row;
-              border: 1px solid #ccc;
-              padding: 8px;
-              border-radius: 4px;
-
-              &.valid {
-                border-color: green;
-              }
-
-              &.invalid {
-                border-color: red;
-              }
-            }
-
-            &.form-textarea {
-              height: 100px;
-              resize: vertical;
-              grid-column: span 2;
-            }
-          }
-        }
-      }
-
-      .user-details-fieldset {
-        border: 0;
-
-        legend {
-          font-family: Itim;
-          font-size: 20px;
-          font-weight: bold;
-          line-height: normal;
-        }
-
-        .user-form {
-          display: grid;
-          grid-template-areas:
-            "name none"
-            "email phone"
-            "specialRequest specialRequest";
-          justify-items: center;
-
-          label {
-            font-family: Itim;
-            font-size: 20px;
-            font-weight: 400;
-            line-height: normal;
-          }
-
-          .form-field {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            border-radius: 8px;
-            border: 0px;
-            padding: 8px;
-            width: 90%;
-            display: flex;
-            justify-content: flex-start;
-
-            &.form-textarea {
-              height: 100px;
-              resize: vertical;
-              grid-column: span 2;
-            }
-
-            &.name {
-              grid-area: name;
-            }
-
-            &.phone {
-              grid-area: phone;
-            }
-
-            &.email {
-              grid-area: email;
-            }
-
-            &.specialRequest {
-              grid-area: specialRequest;
-            }
-          }
-        }
-      }
-
-      .form-fields-button {
-        display: flex;
-        justify-content: center;
-      }
+      justify-content: center;
     }
+  }
 
-    .required-asterisk {
-      color: rgb(87, 23, 23);
-      font-size: 18px;
-      margin-left: 4px;
-    }
+  .required-asterisk {
+    color: rgb(87, 23, 23);
+    font-size: 18px;
+    margin-left: 4px;
+  }
 
-    .error-message {
-      color: red;
-      font-size: 16px;
-      margin-top: 4px;
-    }
+  .error-message {
+    color: red;
+    font-size: 16px;
+    margin-top: 4px;
   }
 }
 
 @include breakpoint-mobile {
-  .booking-form-container .reservation-form {
-    gap: 10px;
-    .user-details-fieldset .user-form {
-      display: flex;
-      flex-direction: column;
+  .booking-form-container {
+    width: 80%;
+    .reservation-form {
+      gap: 10px;
+      .user-details-fieldset .user-form {
+        display: flex;
+        flex-direction: column;
+      }
+      .table-details-fieldset {
+        .table-forms {
+          display: grid;
+          grid-template-columns: auto;
+        }
+      }
     }
-    .table-details-fieldset {
-      .table-forms {
-        display: grid;
-        grid-template-columns: auto;
+  }
+}
+
+@include breakpoint-tablet {
+  .booking-form-container {
+    width: 80%;
+    .reservation-form {
+      gap: 10px;
+      .user-details-fieldset .user-form {
+        display: flex;
+        flex-direction: column;
+      }
+      .table-details-fieldset {
+        .table-forms {
+          display: grid;
+          grid-template-columns: auto;
+        }
       }
     }
   }

@@ -80,12 +80,19 @@
     .about-image-1,
     .about-image-2 {
       display: block;
-      width: 180px;
-      object-fit: cover;
-      height: 250px;
+      width: auto;
+      height: 210px;
       flex-shrink: 0;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      &.hoverable {
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
     }
   }
 
