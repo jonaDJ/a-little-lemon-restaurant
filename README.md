@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# A Little Lemon Restaurant
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the "A Little Lemon Restaurant" project! This React-based website showcases our restaurant's offerings and provides a delightful user experience across various devices, including mobile, tablet, laptop, and desktop. We've utilized technologies such as SCSS, JavaScript, and Jest for testing to ensure a seamless and enjoyable experience for our customers.
+
+**[Check out the Live Demo](https://little-lemon-8104b.web.app/)**
+
+## Table of Contents
+- [Getting Started](#getting-started)
+- [Technologies Used](#technologies-used)
+- [Accessibility (a11y)](#accessibility-a11y)
+- [Available Scripts](#available-scripts)
+- [Features](#features)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Troubleshooting](#troubleshooting)
+
+
+## Getting Started
+
+To get started with the project, follow these steps:
+
+1. Clone the repository to your local machine:
+
+   ```shell
+   git clone https://github.com/jonaDJ/a-little-lemon-restaurant.git
+
+2. Navigate to the project directory:
+   ```shell
+   cd a-little-lemon-restaurant
+
+3. Install the project dependencies:
+   ```shell
+     npm install
+
+4. Start the development server:
+   ```shell
+   npm start
+
+5. Open your browser and visit http://localhost:3000 to view the restaurant website.
+
+## Technologies Used
+
+This project utilizes several technologies, including:
+
+- React: A JavaScript library for building user interfaces.
+- SCSS: A CSS preprocessor for enhancing the styling capabilities of your application.
+- JavaScript: The primary programming language for building interactive web applications.
+- Jest: A JavaScript testing framework for unit and integration testing.
+- SEO: The project includes SEO optimizations to improve its visibility on search engines.
+
+## Accessibility (a11y)
+We are committed to making our website accessible to all users. Our website adheres to accessibility standards (a11y) to ensure that people with disabilities can use it effectively. We've implemented features such as proper semantic HTML elements, keyboard navigation, and ARIA roles and attributes to enhance accessibility.
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can run the following scripts:
 
-### `npm start`
+- `npm start`: Runs the app in development mode.
+- `npm test`: Launches the test runner in interactive watch mode.
+- `npm run build`: Builds the app for production.
+- `npm run eject`: Ejects the project from Create React App.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Showcase the restaurant's menu, location, and contact information.
+- Provide an interactive and user-friendly experience for customers.
+- Utilize SCSS for enhanced styling and responsiveness.
 
-### `npm test`
+## Testing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+We ensure code quality and reliability by using Jest for testing. You can run tests with the following command:
 
-### `npm run build`
+    ```shell
+    npm test
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deployment
+To deploy this project, follow the deployment steps outlined in the Create React App documentation.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Troubleshooting
+If you encounter any issues or have questions, refer to the troubleshooting section of the Create React App documentation.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Thank you for visiting our restaurant website! We hope you have a delightful experience exploring our offerings.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
