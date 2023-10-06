@@ -4,7 +4,7 @@
 
 .about-section {
   background-color: $primary-light-color;
-  padding: 4rem 0;
+  padding: 10rem 0;
 
   .about-block {
     display: inline-flex;
@@ -111,6 +111,10 @@
 }
 
 @include breakpoint-mobile {
+  .about-section {
+    padding: 3rem 0;
+  }
+
   .about-info {
     flex-direction: column;
   }
@@ -133,6 +137,9 @@
 }
 
 @include breakpoint-tablet {
+  .about-section {
+    padding: 5rem 0;
+  }
   .about-info {
     flex-direction: column;
   }
@@ -158,5 +165,11 @@
   }
   .about-section .about-images {
     width: auto;
+  }
+}
+
+@include breakpoint-laptop {
+  .about-section {
+    padding: 7rem 0;
   }
 }

@@ -2,7 +2,7 @@
 
 .testimonals-section {
   background-color: gray;
-  padding: 8rem 0;
+  padding: 10rem 0;
 
   .testimonials-title {
     display: grid;
@@ -31,6 +31,7 @@
 
 @include breakpoint-mobile {
   .testimonals-section {
+    padding: 3rem 0;
     .cards-rating {
       display: flex;
       align-items: flex-start;
@@ -44,6 +45,7 @@
 
 @include breakpoint-tablet {
   .testimonals-section {
+    padding: 5rem 0;
     .cards-rating {
       display: flex;
       align-items: flex-start;
@@ -52,5 +54,11 @@
       flex-wrap: wrap;
       justify-content: space-around;
     }
+  }
+}
+
+@include breakpoint-laptop {
+  .testimonals-section {
+    padding: 7rem 0;
   }
 }
