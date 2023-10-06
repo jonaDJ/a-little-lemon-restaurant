@@ -2,7 +2,7 @@
 
 Welcome to the "A Little Lemon Restaurant" project! This React-based website showcases our restaurant's offerings and provides a delightful user experience across various devices, including mobile, tablet, laptop, and desktop. We've utilized technologies such as SCSS, JavaScript, and Jest for testing to ensure a seamless and enjoyable experience for our customers.
 
-**[Check out the Live Demo](https://little-lemon-8104b.web.app/)**
+**[Check out the Live Demo](https://a-little-lemon-restaurant.web.app/)**
 
 ## Table of Contents
 - [Getting Started](#getting-started)
